@@ -2,7 +2,7 @@
 
 # Edit these two
 IN_GAME_SATURATION=1000
-DEFAULT_SATURATION=100
+DEFAULT_SATURATION=$(nvidia-settings -q DigitalVibrance | grep -E ": [0-9]+\." | grep -Eo "[0-9]{2,}+" | head -n 1)
 
 nvidia-settings -a DigitalVibrance=$IN_GAME_SATURATION
 "$@"
