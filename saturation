@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+# Edit these two
+IN_GAME_SATURATION=1000
+DEFAULT_SATURATION=100
+
+nvidia-settings -a DigitalVibrance=$IN_GAME_SATURATION
+"$@"
+nvidia-settings -a DigitalVibrance=$DEFAULT_SATURATION
